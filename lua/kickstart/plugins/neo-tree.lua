@@ -19,7 +19,9 @@ return {
         mappings = {
           ['\\'] = 'close_window',
         },
+        position = 'float',
       },
     },
+    popup_border_style = 'solid',
   },
 }
