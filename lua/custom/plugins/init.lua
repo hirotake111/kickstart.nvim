@@ -79,4 +79,28 @@ return {
       require('rust-tools').setup(opts)
     end,
   },
+  {
+    'ThePrimeagen/harpoon',
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+    },
+    config = function()
+      local mark = require 'harpoon.mark'
+      local ui = require 'harpoon.ui'
+      local nav = function(i)
+        return function()
+          ui.nav_file(i)
+        end
+      end
+      vim.keymap.set('n', '<leader>a', mark.add_file, { desc = '<Harpoon>add file' })
+      vim.keymap.set('n', '<C-e>', ui.toggle_quick_menu, { desc = '<Harpoon>toggle quick menu' })
+      vim.keymap.set('n', '<Tab>', ui.nav_next, { desc = '<Harpoon>navigates to next mark' })
+      vim.keymap.set('n', '<S-Tab>', ui.nav_prev, { desc = '<Harpoon>navigates to previous mark' })
+      vim.keymap.set('n', '<C-j>', nav(1), { desc = '<Harpoon>navigates to file 1' })
+      vim.keymap.set('n', '<C-k>', nav(2), { desc = '<Harpoon>navigates to file 2' })
+      vim.keymap.set('n', '<C-l>', nav(3), { desc = '<Harpoon>navigates to file 3' })
+      vim.keymap.set('n', '<C-;>', nav(4), { desc = '<Harpoon>navigates to file 4' })
+      vim.keymap.set('n', '<C-u>;', nav(5), { desc = '<Harpoon>navigates to file 5' })
+    end,
+  },
 }
