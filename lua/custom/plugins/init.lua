@@ -10,7 +10,4 @@ return {
   'mini-indent.lua',
   'rust-tools.lua',
   'harpoon.lua',
-  {
-    dir = '~/Documents/projects/github.com/hirotake111/stackmap.nvim',
-  },
 }
