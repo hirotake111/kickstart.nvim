@@ -569,7 +569,9 @@ require('lazy').setup({
       --  - settings (table): Override the default settings passed when initializing the server.
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
-        clangd = {},
+        clangd = {
+          filetypes = { 'c', 'cpp', 'h' },
+        },
         -- gopls = {},
         -- pyright = {},
         -- rust_analyzer = {},
@@ -785,8 +787,8 @@ require('lazy').setup({
     -- 'folke/tokyonight.nvim',
     -- 'catppuccin/nvim',
     -- name = 'catppuccin',
-    "scottmckendry/cyberdream.nvim",
-    name = "cyberdream",
+    'scottmckendry/cyberdream.nvim',
+    name = 'cyberdream',
     priority = 1000, -- Make sure to load this before all the other start plugins.
     init = function()
       -- require('catppuccin').setup {
