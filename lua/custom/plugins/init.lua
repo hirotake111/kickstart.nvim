@@ -26,6 +26,7 @@ return {
         sources = {
           formatting.stylua,
           formatting.prettierd,
+          formatting.ocamlformat,
         },
       }
     end,
