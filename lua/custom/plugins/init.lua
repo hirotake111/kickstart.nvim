@@ -74,14 +74,11 @@ return {
       })
     end,
   },
-  -- 'rust-tools.lua',
+  -- Rust
   {
-    'simrat39/rust-tools.nvim',
-    dependencies = 'neovim/nvim-lspconfig',
-    opts = {},
-    config = function(_, opts)
-      require('rust-tools').setup(opts)
-    end,
+    'mrcjkb/rustaceanvim',
+    version = '^5', -- Recommended
+    lazy = false, -- This plugin is already lazy
   },
   -- 'harpoon.lua',
   {
