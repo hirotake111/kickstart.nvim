@@ -11,7 +11,7 @@ vim.keymap.set('n', '<leader>td', ':PlenaryBustedDirectory .<CR>', { desc = '<Pl
 vim.keymap.set('i', '<C-l>', function()
   local line = vim.fn.getline '.'
   local col = vim.fn.getpos('.')[3]
-  local substring = line:sub(1, col)
+  local substring = line:sub(1, col - 1)
   local result = vim.fn.matchstr(substring, [[\v<(\k(<)@!)*$]])
   return '<C-w>' .. result:upper()
-end, { noremap = true, silent = true, desc = 'CAPITALIZE current word' })
+end, { expr = true })
