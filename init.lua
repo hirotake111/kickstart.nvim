@@ -620,6 +620,12 @@ require('lazy').setup({
             inlayHints = { enable = true },
           },
         },
+        -- TOML
+        taplo = {
+          cmd = { 'taplo', 'lsp', 'stdio' },
+          filetypes = { 'toml' },
+          sigle_file_support = true,
+        },
       }
 
       -- Ensure the servers and tools above are installed

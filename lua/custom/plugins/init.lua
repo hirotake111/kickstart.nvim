@@ -27,6 +27,7 @@ return {
           formatting.stylua,
           formatting.prettierd,
           formatting.ocamlformat,
+          -- formatting.taplo,
         },
       }
     end,
