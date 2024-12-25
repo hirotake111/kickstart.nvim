@@ -340,6 +340,7 @@ require('lazy').setup({
       { 'nvim-telescope/telescope-ui-select.nvim' },
 
       -- Useful for getting pretty icons, but requires a Nerd Font.
+      -- { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
       { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
     },
     config = function()
@@ -813,10 +814,10 @@ require('lazy').setup({
     --
     -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
     -- 'folke/tokyonight.nvim',
-    -- 'catppuccin/nvim',
+    'catppuccin/nvim',
     -- name = 'catppuccin',
-    'scottmckendry/cyberdream.nvim',
-    name = 'cyberdream',
+    -- 'scottmckendry/cyberdream.nvim',
+    -- name = 'cyberdream',
     priority = 1000, -- Make sure to load this before all the other start plugins.
     init = function()
       -- require('catppuccin').setup {
@@ -831,8 +832,8 @@ require('lazy').setup({
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
       -- vim.cmd.colorscheme 'tokyonight-night'
-      -- vim.cmd.colorscheme 'catppuccin'
-      vim.cmd.colorscheme 'cyberdream'
+      vim.cmd.colorscheme 'catppuccin'
+      -- vim.cmd.colorscheme 'cyberdream'
 
       -- You can configure highlights by doing something like:
       -- vim.cmd.hi 'Comment gui=none'
