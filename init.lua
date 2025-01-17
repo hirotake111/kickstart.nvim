@@ -618,13 +618,13 @@ require('lazy').setup({
         -- bufls = {},
 
         -- ocaml
-        ocamllsp = {
-          manual_install = true,
-          settings = {
-            codelens = { enable = true },
-            inlayHints = { enable = true },
-          },
-        },
+        -- ocamllsp = {
+        --   manual_install = true,
+        --   settings = {
+        --     codelens = { enable = true },
+        --     inlayHints = { enable = true },
+        --   },
+        -- },
         -- TOML
         taplo = {
           cmd = { 'taplo', 'lsp', 'stdio' },
