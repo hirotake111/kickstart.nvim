@@ -15,3 +15,8 @@ vim.keymap.set('i', '<C-l>', function()
   local result = vim.fn.matchstr(substring, [[\v<(\k(<)@!)*$]])
   return '<C-w>' .. result:upper()
 end, { expr = true })
+
+-- toggle copilot suggestions
+vim.keymap.set('n', '<leader>tc', function()
+  require('copilot.suggestion').toggle_auto_trigger()
+end, { desc = 'Toggle Copilot suggestions' })
