@@ -107,10 +107,14 @@ return {
         harpoon.ui:toggle_quick_menu(list)
       end, { desc = '<Harpoon>List files' })
 
-      vim.keymap.set('n', '<C-t>', navigate(1), { desc = '<Harpoon>navigates to file 1' })
-      vim.keymap.set('n', '<C-u>', navigate(2), { desc = '<Harpoon>navigates to file 2' })
-      vim.keymap.set('n', '<C-n>', navigate(3), { desc = '<Harpoon>navigates to file 3' })
-      vim.keymap.set('n', '<C-m>', navigate(4), { desc = '<Harpoon>navigates to file 4' })
+      vim.keymap.set('n', '<leader>1', navigate(1), { desc = '<Harpoon>navigates to file 1' })
+      vim.keymap.set('n', '<leader>2', navigate(2), { desc = '<Harpoon>navigates to file 2' })
+      vim.keymap.set('n', '<leader>3', navigate(3), { desc = '<Harpoon>navigates to file 3' })
+      vim.keymap.set('n', '<leader>4', navigate(4), { desc = '<Harpoon>navigates to file 4' })
+      vim.keymap.set('n', '<leader>5', navigate(5), { desc = '<Harpoon>navigates to file 5' })
+      vim.keymap.set('n', '<leader>6', navigate(6), { desc = '<Harpoon>navigates to file 6' })
+      vim.keymap.set('n', '<leader>7', navigate(7), { desc = '<Harpoon>navigates to file 7' })
+      vim.keymap.set('n', '<leader>8', navigate(8), { desc = '<Harpoon>navigates to file 8' })
 
       vim.keymap.set('n', '<Tab>', function()
         list:next()
