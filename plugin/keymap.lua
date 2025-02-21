@@ -4,7 +4,7 @@ vim.keymap.set('i', 'jk', '<Esc>')
 vim.keymap.set('n', 'H', '_')
 vim.keymap.set('n', 'L', '$')
 
--- test
+-- testing purposes
 vim.keymap.set('n', '<leader>tf', '<Plug>PlenaryTestFile', { desc = '<Plenary>Run [T]est [F]iles' })
 vim.keymap.set('n', '<leader>td', ':PlenaryBustedDirectory .<CR>', { desc = '<Plenary>Run [T]est [D]irectory' })
 
@@ -14,7 +14,7 @@ vim.keymap.set('i', '<C-l>', function()
   local substring = line:sub(1, col - 1)
   local result = vim.fn.matchstr(substring, [[\v<(\k(<)@!)*$]])
   return '<C-w>' .. result:upper()
-end, { expr = true })
+end, { expr = true, desc = 'Capitalize all chars in the current word' })
 
 -- toggle copilot suggestions
 vim.keymap.set('n', '<leader>tc', function()
