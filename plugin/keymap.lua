@@ -1,12 +1,12 @@
 vim.keymap.set('i', 'jk', '<Esc>')
-
--- move left/right most position of current line
 vim.keymap.set('n', 'H', '_')
 vim.keymap.set('n', 'L', '$')
 
--- testing purposes
+-- For neovim config
 vim.keymap.set('n', '<leader>tf', '<Plug>PlenaryTestFile', { desc = '<Plenary>Run [T]est [F]iles' })
 vim.keymap.set('n', '<leader>td', ':PlenaryBustedDirectory .<CR>', { desc = '<Plenary>Run [T]est [D]irectory' })
+vim.keymap.set('n', '<leader>x', '<cmd>.lua<CR>', { desc = 'Execute the current line' })
+vim.keymap.set('n', '<leader>X', '<cmd>source %<CR>', { desc = 'Execute the current file' })
 
 vim.keymap.set('i', '<C-l>', function()
   local line = vim.fn.getline '.'
@@ -19,4 +19,5 @@ end, { expr = true, desc = 'Capitalize all chars in the current word' })
 -- toggle copilot suggestions
 vim.keymap.set('n', '<leader>tc', function()
   require('copilot.suggestion').toggle_auto_trigger()
+  print 'Copilot toggled'
 end, { desc = 'Toggle Copilot suggestions' })
