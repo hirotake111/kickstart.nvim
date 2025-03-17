@@ -21,3 +21,9 @@ vim.keymap.set('n', '<leader>tc', function()
   require('copilot.suggestion').toggle_auto_trigger()
   print 'Copilot toggled'
 end, { desc = 'Toggle Copilot suggestions' })
+
+-- toggle copilot chat
+vim.keymap.set('n', '<leader>tt', function()
+  require('CopilotChat').toggle()
+  print 'Copilot chat toggled'
+end, { desc = 'Toggle Copilot chat' })
