@@ -16,11 +16,12 @@ vim.keymap.set('i', '<C-l>', function()
   return '<C-w>' .. result:upper()
 end, { expr = true, desc = 'Capitalize all chars in the current word' })
 
--- toggle copilot suggestions
-vim.keymap.set('n', '<leader>tc', function()
-  require('copilot.suggestion').toggle_auto_trigger()
-  print 'Copilot toggled'
-end, { desc = 'Toggle Copilot suggestions' })
+vim.keymap.set('i', '<C-i>', 'copilot#Accept("\\<CR>")', {
+  expr = true,
+  replace_keycodes = false,
+  desc = 'Accept copilot suggestion',
+})
+vim.g.copilot_no_tab_map = true
 
 -- toggle copilot chat
 vim.keymap.set('n', '<leader>tt', function()

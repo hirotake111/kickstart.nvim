@@ -765,7 +765,7 @@ require('lazy').setup({
               hide_during_completion = true,
               debounce = 75,
               keymap = {
-                accept = '<C-i>',
+                accept = '<C-j>',
                 accept_word = false,
                 accept_line = false,
                 next = '<C-n>',
