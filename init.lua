@@ -156,6 +156,7 @@ vim.opt.scrolloff = 10
 
 -- custom config
 vim.opt.tabstop = 4
+vim.opt.shiftwidth = 2
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
@@ -760,7 +761,7 @@ require('lazy').setup({
               },
             },
             suggestion = {
-              enabled = true,
+              enabled = false,
               auto_trigger = false,
               hide_during_completion = true,
               debounce = 75,

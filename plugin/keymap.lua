@@ -21,7 +21,14 @@ vim.keymap.set('i', '<C-i>', 'copilot#Accept("\\<CR>")', {
   replace_keycodes = false,
   desc = 'Accept copilot suggestion',
 })
+
+-- Use <C-j> to accept copilot suggestions in insert mode
 vim.g.copilot_no_tab_map = true
+vim.keymap.set('i', '<C-j>', 'copilot#Accept("\\<CR>")', {
+  expr = true,
+  replace_keycodes = false,
+  desc = 'Accept copilot suggestion',
+})
 
 -- toggle copilot chat
 vim.keymap.set('n', '<leader>tt', function()
