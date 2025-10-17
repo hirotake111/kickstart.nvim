@@ -1,6 +1,7 @@
 local lspconfig = require 'lspconfig'
 
 lspconfig.gleam.setup {}
+lspconfig.biome.setup {}
 
 lspconfig.docker_compose_language_service.setup {}
 -- A workaround for not detecting docker-compose.yaml file type correctly
