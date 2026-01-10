@@ -1,9 +1,8 @@
-local lspconfig = require 'lspconfig'
+vim.lsp.config('gleam', {})
+vim.lsp.config('boime', {})
 
-lspconfig.gleam.setup {}
-lspconfig.biome.setup {}
+vim.lsp.config('docker_compose_language_service', {})
 
-lspconfig.docker_compose_language_service.setup {}
 -- A workaround for not detecting docker-compose.yaml file type correctly
 vim.api.nvim_create_autocmd({ 'BufEnter' }, {
   pattern = { 'docker-compose.yaml', 'docker-compose.yml' },
