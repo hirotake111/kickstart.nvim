@@ -450,12 +450,12 @@ require('lazy').setup({
   -- mason-org/mason
   {
     'mason-org/mason.nvim',
-    opts = { ensure_installed = { 'gitui' } },
+    opts = { ensure_installed = { 'lazygit' } },
     keys = {
       {
         '<leader>gg',
         function()
-          Snacks.terminal { 'gitui' }
+          Snacks.terminal { 'lazygit' }
         end,
         desc = 'GitUi (cwd)',
       },
